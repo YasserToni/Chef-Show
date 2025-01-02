@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+:root {
+  box-sizing: border-box;
+  background-color: #131313;
+}
+@font-face {
+  font-family: "Restora";
+  src: url("/fonts/RestoraThinItalic.otf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+.header-container {
+  margin-bottom: 0px !important;
+  margin-top: 0px !important;
+}

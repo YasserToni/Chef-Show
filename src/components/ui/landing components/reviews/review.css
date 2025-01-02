@@ -1,0 +1,39 @@
+.carousel {
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-track_left {
+  display: flex;
+  animation: scroll_left 15s linear infinite; /* Adjust duration as needed */
+}
+.carousel-track_right {
+  display: flex;
+  animation: scroll_right 15s linear infinite; /* Adjust duration as needed */
+}
+
+.carousel-track:hover {
+  animation-play-state: paused;
+}
+
+.carousel-item {
+  flex: 0 0 auto; /* Prevent items from shrinking */
+  margin-right: 30px; /* Adjust spacing between items */
+}
+
+@keyframes scroll_left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%); /* Adjust to control scroll distance */
+  }
+}
+@keyframes scroll_right {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0); /* Adjust to control scroll distance */
+  }
+}
