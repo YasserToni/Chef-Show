@@ -1,12 +1,14 @@
 // Import Swiper core and required modules
 import { Navigation, A11y } from "swiper/modules";
-
 import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+import rightIcon from "../../../assets/im/headerImage/left.svg";
+import leftIcon from "../../../assets/im/headerImage/right.svg";
+import bg from "./ero.png";
 
 const SwiperComponent = () => {
   return (
@@ -16,7 +18,7 @@ const SwiperComponent = () => {
         id="prevButton"
       >
         <div className="w-[40px] h-[40px] flex items-center justify-center">
-          <img src="../src/assets/im/right.svg" alt="left-swap-button" />
+          <img src={leftIcon} alt="left-swap-button" />
         </div>
       </button>
       <button
@@ -24,7 +26,7 @@ const SwiperComponent = () => {
         id="nextButton"
       >
         <div className="w-[40px] h-[40px] flex items-center justify-center">
-          <img src="../src/assets/im/left.svg" alt="right-swap-button" />
+          <img src={rightIcon} alt="right-swap-button" />
         </div>
       </button>
       {/* Swiper */}
@@ -44,7 +46,9 @@ const SwiperComponent = () => {
         </SwiperSlide>
 
         {/* Swiper Slide 2 */}
-        <SwiperSlide className="bg-[url('./ero.png')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]"></SwiperSlide>
+        <SwiperSlide
+          className={`bg-[url('${bg}')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]`}
+        ></SwiperSlide>
         <SwiperSlide className="bg-[url('./ero.png')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]"></SwiperSlide>
 
         {/* Swiper Slide 4 */}
