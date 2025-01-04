@@ -9,12 +9,15 @@ import "swiper/css/pagination";
 import rightIcon from "../../../assets/im/headerImage/left.svg";
 import leftIcon from "../../../assets/im/headerImage/right.svg";
 import bg from "./ero.png";
+import swiperIcon from "./../../../assets/im/headerImage/swipreIcon.png";
+import rectangle from "../../../assets/im/headerImage/Rectangle 3.png";
+import Navbar from "./Navbar";
 
 const SwiperComponent = () => {
   return (
-    <div className="relative w-full h-[774px]">
+    <div className="relative w-full h-[774px] border-b border-primary rounded-b-[120px] overflow-hidden">
       <button
-        className="absolute  top-1/2 left-0 transform -translate-y-1/2 z-10  text-white p-2 md:p-5 rounded-full shadow-md border border-secondary ml-[20px] md:ml-[60px]"
+        className="absolute  top-1/2 left-0 transform -translate-y-1/2 z-40  text-white p-2 md:p-5 rounded-full shadow-md border border-secondary ml-[20px] md:ml-[60px]"
         id="prevButton"
       >
         <div className="w-[40px] h-[40px] flex items-center justify-center">
@@ -22,13 +25,40 @@ const SwiperComponent = () => {
         </div>
       </button>
       <button
-        className="absolute top-1/2 right-0 transform -translate-y-1/2 z-10 text-white p-2 md:p-5 rounded-full shadow-md border border-secondary mr-[20px] md:mr-[60px]"
+        className="absolute top-1/2 right-0 transform -translate-y-1/2 z-40 text-white p-2 md:p-5 rounded-full shadow-md border border-secondary mr-[20px] md:mr-[60px]"
         id="nextButton"
       >
         <div className="w-[40px] h-[40px] flex items-center justify-center">
           <img src={rightIcon} alt="right-swap-button" />
         </div>
       </button>
+      <div className="absolute top-[22%] left-[25%] z-30 ">
+        <div className="flex flex-col justify-center items-center">
+          <div>
+            <img src={swiperIcon} alt="swiper icon" />
+          </div>
+          <div className="flex items-center justify-center  mt-[20px]">
+            <img className="w-[6px] h-[6px]" src={rectangle} alt="rectangle" />
+            <span className="text-sm font-Restora font-medium text-primary mx-[8px] uppercase">
+              welcome to THE CHEF SHOW
+            </span>
+            <img className="w-[6px] h-[6px]" src={rectangle} alt="rectangle" />
+          </div>
+          <div className="font-Restora font-normal text-[72px] leading-[92px] text-secondary w-[711px] text-center mt-10 tracking-[.02em] uppercase">
+            delicious food eating experience
+          </div>
+          <div className="font-plus font-normal text-secondary text-[20px] leading-[20px] text-center tracking-[.04em] mt-[14px]">
+            we serve food, Harmony, & Laughter Since 1991
+          </div>
+          <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary mt-10 shadow-[4px_4px_10px_0px_#00000014]">
+            RESERVATION
+          </button>
+        </div>
+      </div>
+      <div className="absolute w-full h-full bg-[#000000BF] z-20 rounded-b-[120px] border-b border-primary"></div>
+      <div className="absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       {/* Swiper */}
       <Swiper
         modules={[Navigation, A11y]}
@@ -41,18 +71,24 @@ const SwiperComponent = () => {
         className="w-full h-full" // Make Swiper take full width and height
       >
         {/* Swiper Slide 1 */}
-        <SwiperSlide className="bg-[url('./ero.png')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px] font-Restora font-extrabold">
-          <div></div>
+        <SwiperSlide className="h-[774px] w-full  flex flex-col justify-center items-center text-white text-3xl rounded-b-[120px] font-Restora">
+          <img src={bg} alt="background" className="w-full" />
         </SwiperSlide>
 
         {/* Swiper Slide 2 */}
         <SwiperSlide
-          className={`bg-[url('${bg}')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]`}
-        ></SwiperSlide>
-        <SwiperSlide className="bg-[url('./ero.png')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]"></SwiperSlide>
+          className={` w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]`}
+        >
+          <img src={bg} alt="background" />
+        </SwiperSlide>
+        <SwiperSlide className=" w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]">
+          <img src={bg} alt="background" />
+        </SwiperSlide>
 
         {/* Swiper Slide 4 */}
-        <SwiperSlide className="bg-[url('./ero.png')] bg-cover w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]"></SwiperSlide>
+        <SwiperSlide className=" w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]">
+          <img src={bg} alt="background" />
+        </SwiperSlide>
       </Swiper>
     </div>
   );

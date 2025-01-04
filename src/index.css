@@ -11,6 +11,15 @@
   font-weight: bold;
   font-style: bold;
 }
+@font-face {
+  font-family: "plus";
+  src: url("/fonts/PlusJakartaSans-LightItalic.ttf") format("truetype");
+  font-weight: bold;
+  font-style: bold;
+}
+html {
+  scroll-behavior: smooth;
+}
 .header-container {
   margin-bottom: 0px !important;
   margin-top: 0px !important;

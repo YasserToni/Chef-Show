@@ -10,7 +10,7 @@ function MenuSection() {
           <div className="text-[32px] leading-8 font-Restora text-secondary font-normal text-center mt-6">
             Spaghetti Pasta
           </div>
-          <div className="font-Restora font-normal text-[#8B8B8B] text-base text-center mt-5">
+          <div className="font-plus font-normal text-[#8B8B8B] text-base text-center mt-5">
             Ground beef, onion, chopped, garlic, minced, green...
           </div>
         </div>

@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         Restora: ["Restora", "sans-serif"],
+        plus: ["plus", "sans-serif"],
       },
     },
   },

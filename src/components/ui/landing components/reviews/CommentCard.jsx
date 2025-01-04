@@ -8,10 +8,10 @@ function CommentCard() {
           <img src={userImage} alt="user image " />
         </div>
         <div className="flex flex-col gap-[10px]">
-          <span className="font-Restora font-normal text-base text-primary leading-4">
+          <span className="font-plus font-normal text-base text-primary leading-4">
             Michael adham
           </span>
-          <span className="font-Restora text-secondary text-xs leading-3 font-[300px]">
+          <span className="font-plus  text-secondary text-xs leading-3 font-[300px] uppercase">
             chief
           </span>
         </div>

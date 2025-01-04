@@ -15,10 +15,10 @@ function Support() {
           }
         />
         <div className="flex gap-4 justify-center mt-10">
-          <button className="w-[146px] h-[52px] text-sm leading-[14px] font-Restora font-medium bg-primary text-secondary ">
+          <button className="w-[146px] h-[52px] text-sm leading-[14px] font-plusfont-medium bg-primary text-secondary ">
             HELP CENTER
           </button>
-          <button className="w-[146px] h-[52px] text-sm leading-[14px] font-Restora font-medium  text-primary border border-primary">
+          <button className="w-[146px] h-[52px] text-sm leading-[14px] font-plus font-medium  text-primary border border-primary">
             CONTACT US
           </button>
         </div>
