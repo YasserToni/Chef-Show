@@ -153,7 +153,7 @@ const CalendarComponent = () => {
       </div>
 
       {/* Days Grid */}
-      <div className="grid grid-cols-5 grid-rows-2 gap-5 mb-8 ">
+      <div className="grid grid-cols-5 grid-rows-2 gap-5 mb-8">
         {displayedDays.map((day, index) => (
           <div
             key={index}
