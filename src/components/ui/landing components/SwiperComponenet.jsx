@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import rightIcon from "../../../assets/im/headerImage/left.svg";
 import leftIcon from "../../../assets/im/headerImage/right.svg";
 import bg from "./ero.png";
