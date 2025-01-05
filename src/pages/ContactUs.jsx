@@ -1,11 +1,13 @@
 import Navbar from "../../src/components/ui/landing components/Navbar";
 import contactUsImage from "../assets/im/headerImage/contactUsImage.png";
+import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
 
 function ContactUs() {
   return (
     <>
       <Navbar />
+      <HeroSection subSection="contact us" />
       <div className="flex justify-center">
         <div className="flex gap-10 flex-wrap-reverse w-[1202px] border border-primary mx-[120px] mb-[180px] mt-[80px]">
           <div className="my-16 ml-10 w-[520px]">

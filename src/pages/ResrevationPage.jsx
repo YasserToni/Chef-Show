@@ -1,11 +1,13 @@
 import CalendarComponent from "../CalendarComponent";
 import Navbar from "../components/ui/landing components/Navbar";
+import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
 
 function ResrevationPage() {
   return (
     <>
       <Navbar />
+      <HeroSection subSection="reservation" />
       <div className=" flex flex-wrap justify-center gap-8 my-20">
         <div className="p-8 border border-primary w-[733px] h-[514px]">
           <CalendarComponent />
@@ -19,8 +21,8 @@ function ResrevationPage() {
           </div>
           <Input label="Full Name" placeholder="Enter your Full Name" />
           <Input label="Email" placeholder="Enter your Email" />
-          <Input label="phone number" placeholder="Enter your phone number" />
-          <Input label=" quantity for seats" placeholder="0" />
+          <Input label="Phone number" placeholder="Enter your phone number" />
+          <Input label=" Quantity for seats" placeholder="0" />
         </div>
       </div>
     </>

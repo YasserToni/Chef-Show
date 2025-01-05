@@ -1,5 +1,6 @@
 import { useState } from "react";
 import nextButtonIcon from "./assets/im/headerImage/next.png";
+// import disableNextButtonIcon from "./assets/im/headerImage/disableNext.png";
 import whiteCircle from "./assets/im/headerImage/white circlee.png";
 import grayCircle from "./assets/im/headerImage/gray circle.png";
 import moveCircle from "./assets/im/headerImage/move circle.png";
@@ -96,7 +97,7 @@ const CalendarComponent = () => {
   const displayedDays = days.slice(visibleDays - 9, visibleDays);
 
   return (
-    <div className="p-4 h-[514px]">
+    <div className="">
       <div className="font-Restora text-secondary text-[40px] leading-[40px] tracking-[.02em] font-normal">
         Pick Your Day
       </div>
@@ -129,16 +130,21 @@ const CalendarComponent = () => {
       {/* Month Selector */}
       <div className="flex items-center justify-between my-10">
         <button
-          className="rotate-180"
+          className={`rotate-180 ${
+            currentMonthIndex === 0 ? "cursor-not-allowed" : ""
+          }`}
           onClick={handlePreviousMonth}
           disabled={currentMonthIndex === 0} // Disable when it's the first month
         >
           <img src={nextButtonIcon} alt="prev Button" />
         </button>
-        <h2 className="font-Restora text-secondary font-normal text-2xl leading-[24px]">
+        <h2 className="font-Restora text-secondary font-normal text-2xl leading-[24px] my-2">
           {currentMonth}
         </h2>
         <button
+          className={` ${
+            currentMonthIndex === months.length - 1 ? "cursor-not-allowed" : ""
+          }`}
           onClick={handleNextMonth}
           disabled={currentMonthIndex === months.length - 1} // Disable when it's the last month
         >
@@ -155,8 +161,6 @@ const CalendarComponent = () => {
               day.booking_status === "fully_booked"
                 ? " text-white cursor-not-allowed"
                 : day.booking_status === "low_availability"
-                ? ""
-                : ""
             } `}
             onClick={() => handleDayClick(day)} // Add the click handler here
           >

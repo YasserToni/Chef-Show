@@ -79,15 +79,15 @@ const SwiperComponent = () => {
         <SwiperSlide
           className={` w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]`}
         >
-          <img src={bg} alt="background" />
+          <img src={bg} alt="background" className="w-full" />
         </SwiperSlide>
         <SwiperSlide className=" w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]">
-          <img src={bg} alt="background" />
+          <img src={bg} alt="background" className="w-full" />
         </SwiperSlide>
 
         {/* Swiper Slide 4 */}
         <SwiperSlide className=" w-full h-full flex items-center justify-cente text-white text-3xl rounded-br-[120px] rounded-bl-[120px]">
-          <img src={bg} alt="background" />
+          <img src={bg} alt="background" className="w-full" />
         </SwiperSlide>
       </Swiper>
     </div>
