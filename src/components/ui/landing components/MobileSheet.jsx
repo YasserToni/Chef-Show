@@ -52,7 +52,7 @@ function MobileSheet() {
           </li>
           <li>
             <NavLink
-              to="/portfolio"
+              to="/reservation"
               className="text-lg font-semibold hover:text-primary"
               onClick={() => setIsOpen(false)}
             >
