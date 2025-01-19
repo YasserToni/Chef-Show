@@ -6,10 +6,12 @@ import Input from "../components/ui/reservreation components/Input";
 function ResrevationPage() {
   return (
     <>
-      <Navbar />
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       <HeroSection subSection="reservation" />
       <div className=" flex flex-wrap justify-center gap-8 my-20">
-        <div className="p-8 border border-primary w-[733px] h-[514px] mb-[180px]">
+        <div className="p-8 border border-primary w-[733px] mb-[48px]  lg:mb-[180px]">
           <CalendarComponent />
           <div className="flex justify-center">
             <button className="text-secondary text-sm leading-[14px] tracking-[.04m] text-center font-plus font-medium uppercase px-16 py-[19px] bg-primary mt-6">

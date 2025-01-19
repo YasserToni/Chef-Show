@@ -2,7 +2,7 @@ import userImage from "../../../../assets/im/headerImage/userImage.png";
 
 function CommentCard() {
   return (
-    <div className="w-[405px] h-[230px] pt-5 px-5 pb-[22px] border border-primary">
+    <div className="w-[405px] h-[230px] pt-5 pb-[22px] border border-primary">
       <div className="flex gap-3">
         <div className="w-[64px] h-[62px]">
           <img src={userImage} alt="user image " />

@@ -3,7 +3,7 @@ import supportIcon from "../../../assets/im/headerImage/supportIcon.png";
 import Header from "../landing components/Header";
 function Support() {
   return (
-    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 my-[180px]">
+    <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 my-14 lg:my-[180px]">
       <div>
         <Header
           specialClass="header-container w-[600px]"
@@ -23,8 +23,8 @@ function Support() {
           </button>
         </div>
       </div>
-      <div className="w-[624pz] h-[448px]">
-        <img src={supportUsImage} alt="support us image" />
+      <div className=" lg:h-[448px]">
+        <img src={supportUsImage} alt="support us image" className="mx-auto" />
       </div>
     </div>
   );

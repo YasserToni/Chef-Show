@@ -14,7 +14,7 @@ function LandingPage() {
   return (
     <>
       <SwiperComponenet />
-      <div className="mx-20">
+      <div className="mx-4 lg:mx-20">
         <Header
           specialClass={"w-[668px]"}
           icon={fork_Knife}

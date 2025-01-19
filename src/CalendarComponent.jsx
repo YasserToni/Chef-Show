@@ -43,6 +43,7 @@ const data = [
     available_seats_num: i % 6 === 0 ? 0 : Math.floor(Math.random() * 20) + 1,
   })),
 ];
+console.log(data);
 
 // Group data by "Month Year"
 const groupByMonth = (data) => {
@@ -90,9 +91,19 @@ const CalendarComponent = () => {
   };
 
   const handleDayClick = (day) => {
-    setSelectedDay(day); // Set the selected day in the state
+    // If the clicked day is already selected, unselect it
+    if (selectedDay === day) {
+      setSelectedDay(null);
+    } else {
+      setSelectedDay(day); // Set the clicked day as selected
+    }
     console.log("Selected Day:", day); // Print it in the console
   };
+
+  // const handleDayClick = (day) => {
+  //   setSelectedDay(day); // Set the selected day in the state
+  //   console.log("Selected Day:", day); // Print it in the console
+  // };
 
   const displayedDays = days.slice(visibleDays - 9, visibleDays);
 
@@ -153,35 +164,37 @@ const CalendarComponent = () => {
       </div>
 
       {/* Days Grid */}
-      <div className="grid grid-cols-5 grid-rows-2 gap-5 mb-8">
-        {displayedDays.map((day, index) => (
-          <div
-            key={index}
-            className={`w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
-              day.booking_status === "fully_booked"
-                ? " text-white cursor-not-allowed"
-                : day.booking_status === "low_availability"
-            } `}
-            onClick={() => handleDayClick(day)} // Add the click handler here
-          >
-            <span className="font-plus text-sm leading-[14px] tracking-[.04em] text-[#A5A5A5] mt-3">
-              {day.day}
-            </span>
-            <span className="font-Restora text-2xl leading-[24px] tracking-[.02eem] text-secondary pb-4 border-b-[3px] mb-4 mt-3 border-primary">
-              {day.date}
-            </span>
-            <span className="text-[10px] font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
-          </div>
-        ))}
-        {/* More Button */}
-        {visibleDays < days.length && (
-          <button
-            className="w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
-            onClick={handleShowMore}
-          >
-            More
-          </button>
-        )}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5  grid-rows-2 gap-2 lg:gap-5 mb-8 mx-auto">
+          {displayedDays.map((day, index) => (
+            <div
+              key={index}
+              className={`w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
+                day.booking_status === "fully_booked"
+                  ? " text-white cursor-not-allowed"
+                  : day.booking_status === "low_availability"
+              } ${selectedDay === day ? "bg-primary text-white" : ""} `}
+              onClick={() => handleDayClick(day)} // Add the click handler here
+            >
+              <span className="font-plus text-sm leading-[14px] tracking-[.04em] text-[#A5A5A5] mt-3">
+                {day.day}
+              </span>
+              <span className="font-Restora text-2xl leading-[24px] tracking-[.02eem] text-secondary pb-4 border-b-[3px] mb-4 mt-3 border-primary">
+                {day.date}
+              </span>
+              <span className="text-[10px] font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
+            </div>
+          ))}
+          {/* More Button */}
+          {visibleDays < days.length && (
+            <button
+              className="w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              onClick={handleShowMore}
+            >
+              More
+            </button>
+          )}
+        </div>
       </div>
     </div>
   );

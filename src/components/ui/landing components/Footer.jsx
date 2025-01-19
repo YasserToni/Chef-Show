@@ -4,10 +4,10 @@ import insgramIcon from "../../../assets/im/headerImage/instgram.png";
 import mailIcon from "../../../assets/im/headerImage/mail.png";
 function Footer() {
   return (
-    <footer className="grid grid-cols-1 lg:grid-cols-[380px_auto] gap-[80px]  px-20 pt-20 pb-[147px] border-t border-primary rounded-t-[140px]">
-      <div className="w-[380px]">
+    <footer className="grid grid-cols-1 lg:grid-cols-[380px_auto] gap-[40px] lg:gap-[80px] px-8  lg:px-20 pt-20 pb-[147px] border-t border-primary rounded-t-[48px]  lg:rounded-t-[140px]">
+      <div className="lg:w-[380px]">
         <div>
-          <img src={footerIcon} alt="footer icon" />
+          <img src={footerIcon} alt="footer icon" className="w-[250px]" />
         </div>
         <div className="text-[#8B8B8B] text-xs leading-[20px] mt-6 font-plus font-normal">
           the chef show® is a female-driven, Egypt-based fashion brand, creating
@@ -28,7 +28,7 @@ function Footer() {
         </div>
       </div>
 
-      <div className="text-[32px] leading-[48px] text-secondary font-Restora font-normal">
+      <div className="text-[15px] lg:text-[32px] leading-[1.75rem] lg:leading-[48px] text-secondary font-Restora font-normal">
         Introducing our New Fashion Collection, where contemporary style meets
         timeless elegance.
       </div>
