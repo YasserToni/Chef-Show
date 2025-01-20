@@ -165,7 +165,7 @@ const CalendarComponent = () => {
 
       {/* Days Grid */}
       <div className="flex justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5  grid-rows-2 gap-2 lg:gap-5 mb-8 mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5  grid-rows-2 gap-2 lg:gap-5 mb-8  lg:mx-auto">
           {displayedDays.map((day, index) => (
             <div
               key={index}

@@ -10,7 +10,7 @@ function HeroSection({ subSection }) {
         alt=""
       />
       <div className=" z-10 uppercase text-center text-secondary font-Restora font-normal text-[48px] lg:text-[56px] leading-[5rem] lg:leading-[56px] tracking-[.02me]">
-        reservation
+        {subSection}
       </div>
       <div className="mt-5 flex gap-2 lg:gap-[18px] font-plus font-normal text-xs lg:text-base leading-4">
         <span className="text-secondary ">HOME</span>

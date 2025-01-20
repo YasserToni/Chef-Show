@@ -36,19 +36,24 @@ function Navbar() {
       <div className="hidden md:block">
         <ul className="flex gap-16 text-secondary h-full items-center ">
           <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="/">HOME</NavLink>
+            <NavLink to="/" className="p-2 rounded-md">
+              HOME
+            </NavLink>
           </li>
           <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="/contact">ABOUT</NavLink>
+            <NavLink className="p-2 rounded-md" to="/contact">
+              CONTACT
+            </NavLink>
+          </li>
+          <li className=" hover:border-b-[5px]   border-primary py-[32px] transition-all duration-300">
+            <NavLink to="/pastshow" className="p-2 rounded-md">
+              PAST SHOWS
+            </NavLink>
           </li>
           <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="/reservation">EXPERIENCE</NavLink>
-          </li>
-          <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="">MENU</NavLink>
-          </li>
-          <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="">RESERVATION</NavLink>
+            <NavLink to="/reservation" className="p-2 rounded-md">
+              RESERVATION
+            </NavLink>
           </li>
         </ul>
       </div>

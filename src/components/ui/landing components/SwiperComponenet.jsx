@@ -9,10 +9,10 @@ import "swiper/css/pagination";
 
 import rightIcon from "../../../assets/im/headerImage/left.svg";
 import leftIcon from "../../../assets/im/headerImage/right.svg";
-// import bg from "./ero.png";
+
 import swiperIcon from "./../../../assets/im/headerImage/swipreIcon.png";
 import rectangle from "../../../assets/im/headerImage/Rectangle 3.png";
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 
 const SwiperComponent = () => {
   return (
@@ -34,34 +34,9 @@ const SwiperComponent = () => {
           <img src={rightIcon} alt="right-swap-button" />
         </div>
       </button>
-
-      {/* <div className="absolute top-[22%] left-[25%] z-30 ">
-        <div className="flex flex-col justify-center items-center">
-          <div>
-            <img src={swiperIcon} alt="swiper icon" />
-          </div>
-          <div className="flex items-center justify-center  mt-[20px]">
-            <img className="w-[6px] h-[6px]" src={rectangle} alt="rectangle" />
-            <span className="text-sm font-Restora font-medium text-primary mx-[8px] uppercase">
-              welcome to THE CHEF SHOW
-            </span>
-            <img className="w-[6px] h-[6px]" src={rectangle} alt="rectangle" />
-          </div>
-          <div className="font-Restora font-normal text-[72px] leading-[92px] text-secondary w-[711px] text-center mt-10 tracking-[.02em] uppercase">
-            delicious food eating experience
-          </div>
-          <div className="font-plus font-normal text-secondary text-[20px] leading-[20px] text-center tracking-[.04em] mt-[14px]">
-            we serve food, Harmony, & Laughter Since 1991
-          </div>
-          <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary mt-10 shadow-[4px_4px_10px_0px_#00000014]">
-            RESERVATION
-          </button>
-        </div>
-      </div> */}
-      {/* <div className="absolute w-full h-full bg-[#000000BF] z-20 rounded-b-[48px] lg:rounded-b-[120px] border-b border-primary"></div> */}
-      <div className=" absolute top-0 z-30 w-full">
+      {/* <div className=" absolute top-0 z-30 w-full">
         <Navbar />
-      </div>
+      </div> */}
 
       {/* Swiper */}
       <Swiper

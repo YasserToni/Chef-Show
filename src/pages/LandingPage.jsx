@@ -9,8 +9,9 @@ import fork_Knife from "../assets/im/headerImage/Fork-Knife.png";
 import perfectPlaceIcon from "../assets/im/headerImage/perfectPlaceIcon.png";
 import menuIcon from "../assets/im/headerImage/MenuIcon.png";
 import reviewIcon from "../assets/im/headerImage/ReviewIcon.png";
+// import transition from "../transition";
 
-function LandingPage() {
+const LandingPage = () => {
   return (
     <>
       <SwiperComponenet />
@@ -51,6 +52,6 @@ function LandingPage() {
       </div>
     </>
   );
-}
+};
 
 export default LandingPage;
