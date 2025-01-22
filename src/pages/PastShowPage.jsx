@@ -1,37 +1,7 @@
-// import Navbar from "../components/ui/landing components/Navbar";
-// import MainSection from "../components/ui/pash show component/MainSection";
-// import HeroSection from "../components/ui/reservreation components/HeroSection";
-// function PastShowPage() {
-//   return (
-//     <>
-//       <div className=" absolute top-0 z-30 w-full">
-//         <Navbar />
-//       </div>
-//       <HeroSection subSection="PAST SHOWS" />
-//       <div className="relative">
-//         <div className="absolute w-[2px] h-[calc(100%-300px)] bg-gray-600 opacity-100 top-48 left-8 rounded-full"></div>
-//         <div
-//           id="scrollbar"
-//           className=" absolute w-[2px] h-[300px] bg-primary top-48 left-8 rounded-full "
-//         ></div>
-//         <MainSection />
-//         <MainSection />
-//         <MainSection />
-//         <div className="pb-10 md:pb-40">
-//           <MainSection />
-//         </div>
-//       </div>
-//     </>
-//   );
-// }
-
-// export default PastShowPage;
-
 import { useState, useEffect } from "react";
-// import Navbar from "../components/ui/landing components/Navbar";
+
 import MainSection from "../components/ui/pash show component/MainSection";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
-// import transition from "../transition";
 
 function PastShowPage() {
   const [text, setText] = useState("STORY");
@@ -67,9 +37,6 @@ function PastShowPage() {
 
   return (
     <>
-      {/* <div className="absolute top-0 z-30 w-full">
-        <Navbar />
-      </div> */}
       <HeroSection subSection="PAST SHOWS" />
 
       {/* ////////////////////////// */}

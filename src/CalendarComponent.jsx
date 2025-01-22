@@ -1,6 +1,5 @@
 import { useState } from "react";
 import nextButtonIcon from "./assets/im/headerImage/next.png";
-// import disableNextButtonIcon from "./assets/im/headerImage/disableNext.png";
 import whiteCircle from "./assets/im/headerImage/white circlee.png";
 import grayCircle from "./assets/im/headerImage/gray circle.png";
 import moveCircle from "./assets/im/headerImage/move circle.png";
@@ -86,12 +85,10 @@ const CalendarComponent = () => {
   };
 
   const handleShowMore = () => {
-    // Show next 9 days (replace the first 9 with the next set)
-    setVisibleDays((prev) => Math.min(prev + 9, days.length));
+    setVisibleDays(days.length); // Show all days for the current month
   };
 
   const handleDayClick = (day) => {
-    // If the clicked day is already selected, unselect it
     if (selectedDay === day) {
       setSelectedDay(null);
     } else {
@@ -100,12 +97,7 @@ const CalendarComponent = () => {
     console.log("Selected Day:", day); // Print it in the console
   };
 
-  // const handleDayClick = (day) => {
-  //   setSelectedDay(day); // Set the selected day in the state
-  //   console.log("Selected Day:", day); // Print it in the console
-  // };
-
-  const displayedDays = days.slice(visibleDays - 9, visibleDays);
+  const displayedDays = days.slice(0, visibleDays);
 
   return (
     <div className="">
@@ -123,7 +115,7 @@ const CalendarComponent = () => {
         </div>
         <div className="flex items-center gap-[6px]">
           <span>
-            <img src={grayCircle} alt="Low Availabilityicon" />
+            <img src={grayCircle} alt="Low Availability icon" />
           </span>
           <span className="font-plus text-sm leading-[14px] text-secondary uppercase">
             Low Availability
@@ -164,17 +156,17 @@ const CalendarComponent = () => {
       </div>
 
       {/* Days Grid */}
-      <div className="flex justify-center">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5  grid-rows-2 gap-2 lg:gap-5 mb-8  lg:mx-auto">
+      <div className="flex justify-center ">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 grid-rows-2 gap-5 lg:gap-5 mb-8 lg:mx-auto">
           {displayedDays.map((day, index) => (
             <div
               key={index}
               className={`w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
                 day.booking_status === "fully_booked"
-                  ? " text-white cursor-not-allowed"
+                  ? "text-white cursor-not-allowed"
                   : day.booking_status === "low_availability"
               } ${selectedDay === day ? "bg-primary text-white" : ""} `}
-              onClick={() => handleDayClick(day)} // Add the click handler here
+              onClick={() => handleDayClick(day)}
             >
               <span className="font-plus text-sm leading-[14px] tracking-[.04em] text-[#A5A5A5] mt-3">
                 {day.day}
@@ -182,10 +174,10 @@ const CalendarComponent = () => {
               <span className="font-Restora text-2xl leading-[24px] tracking-[.02eem] text-secondary pb-4 border-b-[3px] mb-4 mt-3 border-primary">
                 {day.date}
               </span>
-              <span className="text-[10px] font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
+              <span className="text-[9px] font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
             </div>
           ))}
-          {/* More Button */}
+          {/* Show All Days Button */}
           {visibleDays < days.length && (
             <button
               className="w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"

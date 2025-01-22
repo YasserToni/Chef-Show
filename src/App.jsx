@@ -6,8 +6,9 @@ import Footer from "./components/ui/landing components/Footer";
 import PastShowPage from "./pages/PastShowPage";
 import Navbar from "./components/ui/landing components/Navbar";
 import { AnimatePresence } from "framer-motion";
-// import transition from "../transition";
 import { motion } from "framer-motion";
+import { TimelineDemo } from "./pages/TimelineDemo";
+import { Timeline } from "./components/ui/timeline";
 
 function PageWrapper({ children }) {
   return (
@@ -18,18 +19,16 @@ function PageWrapper({ children }) {
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 1 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <children />
-      </motion.div>
+      />
+
       <motion.div
         className="slide-out"
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
-      >
-        <children />
-      </motion.div>
+      />
+      {children}
     </>
   );
 }
@@ -67,7 +66,7 @@ function AinmationRoutes() {
           path="/pastshow"
           element={
             <PageWrapper>
-              <PastShowPage />
+              <TimelineDemo />
             </PageWrapper>
           }
         />
@@ -76,29 +75,14 @@ function AinmationRoutes() {
   );
 }
 function App() {
-  const location = useLocation();
   return (
-    <>
-      <>
-        <AnimatePresence mode="wait">
-          <div className=" absolute top-0 z-30 w-full">
-            <Navbar />
-          </div>
-          <Routes location={location} key={location.pathname}>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/reservation" element={<ResrevationPage />} />
-            <Route path="/contact" element={<ContactUs />} />
-            <Route path="/pastshow" element={<PastShowPage />} />
-          </Routes>
-        </AnimatePresence>
-        <Footer />
-      </>
-      <>
-        {/* <Navbar />
+    <div className="bg-[#131313]">
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       <AinmationRoutes />
-      <Footer /> */}
-      </>
-    </>
+      <Footer />
+    </div>
   );
 }
 

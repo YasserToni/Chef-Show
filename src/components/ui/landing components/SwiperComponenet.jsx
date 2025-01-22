@@ -12,13 +12,12 @@ import leftIcon from "../../../assets/im/headerImage/right.svg";
 
 import swiperIcon from "./../../../assets/im/headerImage/swipreIcon.png";
 import rectangle from "../../../assets/im/headerImage/Rectangle 3.png";
-// import Navbar from "./Navbar";
 
 const SwiperComponent = () => {
   return (
     <div className="relative w-screen h-[699px] lg:h-[774px] border-b border-primary rounded-b-[48px] lg:rounded-b-[120px] overflow-hidden">
       <button
-        className="absolute  smallBtn md:top-2/3 lg:top-1/2 left-0 transform -translate-y-1/2 z-40  text-white p-2 md:p-5 rounded-full shadow-md border border-secondary ml-[20px] md:ml-[60px]"
+        className="absolute  smallBtn md:top-2/3 lg:top-1/2 left-0 transform -translate-y-1/2 z-10  text-white p-2 md:p-5 rounded-full shadow-md border border-secondary ml-[20px] md:ml-[60px]"
         id="prevButton"
       >
         <div className="w-[40px] h-[40px] flex items-center justify-center">
@@ -27,16 +26,13 @@ const SwiperComponent = () => {
       </button>
 
       <button
-        className="absolute smallBtn md:top-2/3 lg:top-1/2 right-0 transform -translate-y-1/2 z-40 text-white p-2 md:p-5 rounded-full shadow-md border border-secondary mr-[20px] md:mr-[60px]"
+        className="absolute smallBtn md:top-2/3 lg:top-1/2 right-0 transform -translate-y-1/2 z-10 text-white p-2 md:p-5 rounded-full shadow-md border border-secondary mr-[20px] md:mr-[60px]"
         id="nextButton"
       >
         <div className="w-[40px] h-[40px] flex items-center justify-center">
           <img src={rightIcon} alt="right-swap-button" />
         </div>
       </button>
-      {/* <div className=" absolute top-0 z-30 w-full">
-        <Navbar />
-      </div> */}
 
       {/* Swiper */}
       <Swiper
@@ -58,7 +54,6 @@ const SwiperComponent = () => {
             {/* Overlay */}
             <div className="absolute w-full h-full bg-[#000000BF] z-20 rounded-b-[48px] lg:rounded-b-[120px] border-b border-primary"></div>
 
-            {/* <img src={bg} alt="background" className="w-full h-[774px] z-30" />  */}
             <div className="relative z-40 ">
               <div className="flex flex-col justify-center items-center mt-[170px]">
                 <div>

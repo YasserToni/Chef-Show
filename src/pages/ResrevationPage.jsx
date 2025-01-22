@@ -1,5 +1,4 @@
 import CalendarComponent from "../CalendarComponent";
-// import Navbar from "../components/ui/landing components/Navbar";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
 
@@ -7,17 +6,12 @@ function ResrevationPage() {
   return (
     <>
       <HeroSection subSection="reservation" />
-      <div className=" flex flex-wrap justify-center gap-8 my-20 mx-2">
-        <div className="p-4 lg:p-8 border border-primary lg:w-[733px] lg:h-[514px] mb-[48px]  lg:mb-[180px]">
+      <div className=" flex flex-wrap justify-center gap-8 my-20 mx-4">
+        <div className="p-4 lg:p-8 border border-primary lg:w-[733px]   mb-[48px]  lg:mb-[180px]">
           <CalendarComponent />
-          <div className="flex justify-center">
-            <button className="text-secondary text-sm leading-[14px] tracking-[.04m] text-center font-plus font-medium uppercase px-16 py-[19px] bg-primary lg:mt-6">
-              complete reservation
-            </button>
-          </div>
         </div>
 
-        <div className="p-4 lg:p-8 border border-primary lg:w-[514px] lg:h-[514px] ">
+        <div className="p-4 lg:p-8 border border-primary lg:w-[514px] h-[590px] sticky top-[97px]">
           <div className="font-Restora font-normal text-[40px] leading-[40px] text-secondary capitalize tracking-[.02em]">
             enter your data
           </div>
@@ -29,6 +23,9 @@ function ResrevationPage() {
             <Input label="Email" placeholder="Enter your Email" />
             <Input label="Phone number" placeholder="Enter your phone number" />
             <Input label=" Quantity for seats" placeholder="0" />
+            <button className="flex justify-center w-full h-fit text-secondary text-sm leading-[14px] tracking-[.04m] text-center font-plus font-medium uppercase  py-[19px] bg-primary mt-6 ">
+              complete reservation
+            </button>
           </div>
         </div>
       </div>

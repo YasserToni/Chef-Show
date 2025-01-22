@@ -7,7 +7,7 @@ function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 800) {
+      if (window.scrollY > 200) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
@@ -22,8 +22,8 @@ function Navbar() {
 
   return (
     <nav
-      className={`" w-full fixed font-plus font-normal text-lg leading-[18px] px-[30px] lg:px-[60px] bg-opacity-50 flex justify-between border-b-[.5px] border-primary " ${
-        isScrolled ? "bg-black/50 backdrop-blur-md" : "bg-transparent"
+      className={`" w-full fixed font-plus font-normal text-[18px] leading-[18px] px-[30px] lg:px-[60px] bg-opacity-50 flex justify-between border-b-[.5px] navBorder" ${
+        isScrolled ? "bg-black/40 backdrop-blur-md" : "bg-transparent"
       }`}
     >
       <div>
@@ -34,24 +34,30 @@ function Navbar() {
         />
       </div>
       <div className="hidden md:block">
-        <ul className="flex gap-16 text-secondary h-full items-center ">
-          <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="/" className="p-2 rounded-md">
+        <ul className="flex justify-between  lg:gap-16 text-secondary h-full items-center ">
+          <li className="  border-primary py-[32px] transition-all duration-300">
+            <NavLink to="/" className="p-2 rounded-md hover:bg-primary ">
               HOME
             </NavLink>
           </li>
-          <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink className="p-2 rounded-md" to="/contact">
+          <li className="  border-primary py-[32px] transition-all duration-300">
+            <NavLink className="p-2 rounded-md hover:bg-primary " to="/contact">
               CONTACT
             </NavLink>
           </li>
-          <li className=" hover:border-b-[5px]   border-primary py-[32px] transition-all duration-300">
-            <NavLink to="/pastshow" className="p-2 rounded-md">
+          <li className="   border-primary py-[32px] transition-all duration-300">
+            <NavLink
+              to="/pastshow"
+              className="p-2 rounded-md hover:bg-primary "
+            >
               PAST SHOWS
             </NavLink>
           </li>
-          <li className=" hover:border-b-[5px]  border-primary py-[32px] transition-all duration-300">
-            <NavLink to="/reservation" className="p-2 rounded-md">
+          <li className=" border-primary py-[32px] transition-all duration-300">
+            <NavLink
+              to="/reservation"
+              className="p-2 rounded-md hover:bg-primary "
+            >
               RESERVATION
             </NavLink>
           </li>
