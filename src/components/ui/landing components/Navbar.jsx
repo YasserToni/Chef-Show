@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`" w-full fixed font-plus font-normal text-[18px] leading-[18px] px-[30px] lg:px-[60px] bg-opacity-50 flex justify-between border-b-[.5px] navBorder" ${
+      className={`" w-full fixed font-plus font-normal text-[18px] leading-[18px] px-[20px] lg:px-[60px] bg-opacity-50 flex justify-between border-b-[.5px] navBorder" ${
         isScrolled ? "bg-black/40 backdrop-blur-md" : "bg-transparent"
       }`}
     >
@@ -34,7 +34,7 @@ function Navbar() {
         />
       </div>
       <div className="hidden md:block">
-        <ul className="flex justify-between  lg:gap-16 text-secondary h-full items-center ">
+        <ul className="flex lg:gap-16 text-secondary h-full items-center ">
           <li className="  border-primary py-[32px] transition-all duration-300">
             <NavLink to="/" className="p-2 rounded-md hover:bg-primary ">
               HOME
