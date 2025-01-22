@@ -1,48 +1,6 @@
 import { useState } from "react";
 import nextButtonIcon from "./assets/im/headerImage/next.png";
-import whiteCircle from "./assets/im/headerImage/white circlee.png";
-import grayCircle from "./assets/im/headerImage/gray circle.png";
-import moveCircle from "./assets/im/headerImage/move circle.png";
-
-// Example Data
-const data = [
-  // January (29 days)
-  ...Array.from({ length: 29 }, (_, i) => ({
-    day: new Date(2025, 0, i + 1).toLocaleDateString("en-US", {
-      weekday: "short",
-    }),
-    date: `${String(i + 1).padStart(2, "0")} Jan`,
-    full_date: `2025-01-${String(i + 1).padStart(2, "0")}`,
-    price: 200,
-    booking_status:
-      i % 5 === 0
-        ? "fully_booked"
-        : i % 3 === 0
-        ? "low_availability"
-        : "available",
-    day_status: i % 7 === 0 ? "closed" : "open",
-    available_seats_num: i % 5 === 0 ? 0 : Math.floor(Math.random() * 20) + 1,
-  })),
-
-  // February (30 days)
-  ...Array.from({ length: 30 }, (_, i) => ({
-    day: new Date(2025, 1, i + 1).toLocaleDateString("en-US", {
-      weekday: "short",
-    }),
-    date: `${String(i + 1).padStart(2, "0")} Feb`,
-    full_date: `2025-02-${String(i + 1).padStart(2, "0")}`,
-    price: 200,
-    booking_status:
-      i % 6 === 0
-        ? "fully_booked"
-        : i % 4 === 0
-        ? "low_availability"
-        : "available",
-    day_status: i % 8 === 0 ? "closed" : "open",
-    available_seats_num: i % 6 === 0 ? 0 : Math.floor(Math.random() * 20) + 1,
-  })),
-];
-console.log(data);
+import { data } from "./dummy-data/calenderData";
 
 // Group data by "Month Year"
 const groupByMonth = (data) => {
@@ -88,6 +46,10 @@ const CalendarComponent = () => {
     setVisibleDays(days.length); // Show all days for the current month
   };
 
+  const handleShowLess = () => {
+    setVisibleDays(9); // Reset to show only the first 9 days
+  };
+
   const handleDayClick = (day) => {
     if (selectedDay === day) {
       setSelectedDay(null);
@@ -106,26 +68,22 @@ const CalendarComponent = () => {
       </div>
       <div className="flex gap-6 mt-6">
         <div className="flex items-center gap-[6px]">
-          <span>
-            <img src={whiteCircle} alt="fully booked icon" />
-          </span>
-          <span className="font-plus text-sm leading-[14px] text-secondary uppercase">
+          <div className="bg-[#EB5757] w-[10px] h-[10px] self-center"></div>
+          <span className="font-Restora text-sm leading-[14px] text-secondary uppercase">
             fully booked
           </span>
         </div>
         <div className="flex items-center gap-[6px]">
-          <span>
-            <img src={grayCircle} alt="Low Availability icon" />
-          </span>
-          <span className="font-plus text-sm leading-[14px] text-secondary uppercase">
+          <div className="bg-[#FCA82A] w-[10px] h-[10px] self-center"></div>
+          <span className="font-Restora text-sm leading-[14px] text-secondary uppercase">
             Low Availability
           </span>
         </div>
         <div className="flex items-center gap-[6px]">
           <span>
-            <img src={moveCircle} alt="Available icon" />
+            <div className="bg-[#27AE60] w-[10px] h-[10px] self-center"></div>
           </span>
-          <span className="font-plus text-sm leading-[14px] text-secondary uppercase">
+          <span className="font-Restora text-sm leading-[14px] text-secondary uppercase">
             Available
           </span>
         </div>
@@ -157,33 +115,54 @@ const CalendarComponent = () => {
 
       {/* Days Grid */}
       <div className="flex justify-center ">
-        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 grid-rows-2 gap-5 lg:gap-5 mb-8 lg:mx-auto">
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 grid-rows-2 gap-5  lg:mx-auto">
           {displayedDays.map((day, index) => (
             <div
               key={index}
-              className={`w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
+              className={`w-[125px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
                 day.booking_status === "fully_booked"
-                  ? "text-white cursor-not-allowed"
+                  ? "text-white cursor-not-allowed pointer-events-none"
                   : day.booking_status === "low_availability"
+                  ? ""
+                  : ""
               } ${selectedDay === day ? "bg-primary text-white" : ""} `}
               onClick={() => handleDayClick(day)}
             >
               <span className="font-plus text-sm leading-[14px] tracking-[.04em] text-[#A5A5A5] mt-3">
                 {day.day}
               </span>
-              <span className="font-Restora text-2xl leading-[24px] tracking-[.02eem] text-secondary pb-4 border-b-[3px] mb-4 mt-3 border-primary">
+              <span
+                className={`font-Restora text-2xl leading-[24px] tracking-[.02eem] text-secondary pb-4 border-b-[3px]  mb-4 mt-3 ${
+                  day.booking_status === "fully_booked"
+                    ? " border-[#EB5757]"
+                    : day.booking_status === "low_availability"
+                    ? "border-[#FCA82A]"
+                    : "border-[#27AE60] "
+                }`}
+              >
                 {day.date}
               </span>
               <span className="text-[9px] font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
             </div>
           ))}
-          {/* Show All Days Button */}
-          {visibleDays < days.length && (
+          {/* Show More or Show Less Button */}
+          {visibleDays < days.length ? (
             <button
               className="w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowMore}
             >
               More
+            </button>
+          ) : (
+            <button
+              className="w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              onClick={handleShowLess}
+            >
+              <img
+                src={nextButtonIcon}
+                alt="Show less Button"
+                className="rotate-180"
+              />
             </button>
           )}
         </div>

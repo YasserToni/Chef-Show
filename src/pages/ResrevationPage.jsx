@@ -7,8 +7,30 @@ function ResrevationPage() {
     <>
       <HeroSection subSection="reservation" />
       <div className=" flex flex-wrap justify-center gap-8 my-20 mx-4">
-        <div className="p-4 lg:p-8 border border-primary lg:w-[733px]   mb-[48px]  lg:mb-[180px]">
-          <CalendarComponent />
+        <div>
+          <div className="p-4 lg:p-8 border border-primary lg:w-[733px] mb-[48px]  lg:mb-8">
+            <CalendarComponent />
+          </div>
+          <div className="hidden text-secondary xl:block p-4 lg:p-8 border border-primary lg:w-[733px] h-32 ">
+            <h5 className="mb-1 tracking-tight font-plus font-semibold text-[18px] leading-5">
+              ⚠️ Food Allergies :
+            </h5>
+            <div className=" font-plus text-[16px] leading-6 mt-3">
+              Please inform us about any food allergies or dietary requirements
+              after making your reservation via
+              <a className="text-primary" href="/contact">
+                Contact Us
+              </a>
+              form or text us directly on WhatsApp via:
+              <a
+                href="https://wa.me/971558233285"
+                target="_blank"
+                className="text-primary"
+              >
+                +971558233285
+              </a>
+            </div>
+          </div>
         </div>
 
         <div className="p-4 lg:p-8 border border-primary lg:w-[514px] h-[590px] sticky top-[97px]">

@@ -1,6 +1,6 @@
 import heroBg from "../../../assets/im/headerImage/heroBg.png";
 import arrow from "../../../assets/im/headerImage/arrow.png";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function HeroSection({ subSection }) {
   return (
@@ -14,9 +14,9 @@ function HeroSection({ subSection }) {
         {subSection}
       </div>
       <div className="mt-5 flex gap-2 lg:gap-[18px] font-plus font-normal text-xs lg:text-base leading-4">
-        <NavLink className="text-secondary" to="/">
+        <Link to="/" className="text-secondary z-40">
           HOME
-        </NavLink>
+        </Link>
 
         <span className="flex items-center justify-center">
           <img src={arrow} alt="arrow icon" />

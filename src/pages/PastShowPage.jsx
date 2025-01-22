@@ -1,82 +1,145 @@
-import { useState, useEffect } from "react";
+import { Img } from "react-image";
 
-import MainSection from "../components/ui/pash show component/MainSection";
+import { Timeline } from "../components/ui/timeline";
+import img1 from "../assets/im/headerImage/img1.jpg";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
 
-function PastShowPage() {
-  const [text, setText] = useState("STORY");
-  const [fadeIn, setFadeIn] = useState(true);
-  const texts = ["STORY", "PASSION", "JOURNEY", "ADVENTURE", "EXPERIENCE"];
-  let currentIndex = 0;
-  const [scrollPosition, setScrollPosition] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeIn(false); // Trigger fade-out effect
-      setTimeout(() => {
-        currentIndex = (currentIndex + 1) % texts.length;
-        setText(texts[currentIndex]); // Change text after fade-out
-        setFadeIn(true); // Trigger fade-in effect
-      }, 500); // Wait for fade-out before changing text (half of the animation duration)
-    }, 2000); // Change text every 2 seconds (1 second for each text + fade animation)
-
-    return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, []);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      setScrollPosition(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
+export default function PastShowPage() {
+  const data = [
+    {
+      title: "The BBQ Show",
+      content: (
+        <div>
+          <p className="text-white text-xs md:text-lg font-normal mb-8 font-Restora">
+            The outdoor culinary adventure is back celebrating the art of
+            grilling over firewood. Hearty dishes, smoky flavors, and cozy
+            evenings under the stars make this season unforgettable - uplifted
+            this year with a fire pit to bring warmth to the cold winter nights
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full"
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full"
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "The BBQ Show",
+      content: (
+        <div>
+          <p className="text-white text-xs md:text-lg font-normal mb-8 font-Restora">
+            The outdoor culinary adventure is back celebrating the art of
+            grilling over firewood. Hearty dishes, smoky flavors, and cozy
+            evenings under the stars make this season unforgettable - uplifted
+            this year with a fire pit to bring warmth to the cold winter nights
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+          </div>
+        </div>
+      ),
+    },
+    {
+      title: "The BBQ Show",
+      content: (
+        <div>
+          <p className="text-white text-xs md:text-lg font-normal mb-8 font-Restora">
+            The outdoor culinary adventure is back celebrating the art of
+            grilling over firewood. Hearty dishes, smoky flavors, and cozy
+            evenings under the stars make this season unforgettable - uplifted
+            this year with a fire pit to bring warmth to the cold winter nights
+          </p>
+          <div className="grid grid-cols-2 gap-4">
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+            <Img
+              src={img1}
+              alt="startup template"
+              width="600"
+              height="600"
+              className="rounded-lg scale-100 md:scale-90 hover:scale-100 transition-all duration-200 cursor-pointer object-cover h-32 md:h-44 lg:h-72 w-full "
+            />
+          </div>
+        </div>
+      ),
+    },
+  ];
   return (
-    <>
-      <HeroSection subSection="PAST SHOWS" />
-
-      {/* ////////////////////////// */}
-      <div className="ml-10 mt-20 lg:mt-56  max-w-[56rem] mb-10 lg:mb-20 text-left">
-        <div className="text-[24px] mb-4 lg:text-5xl font-Restora font-bold text-white">
-          <h2 className="inline-block">Our Culinary &nbsp;</h2>
-          <span
-            className={`inline-block  transition-opacity duration-500 ${
-              fadeIn ? "opacity-100" : "opacity-0"
-            }`}
-          >
-            {text}
-          </span>
-        </div>
-        <p className=" text-secondary text-sm md:text-base w-full md:max-w-sm lg:max-w-md">
-          Welcome to The Chef Show, where culinary meets creativity, connection,
-          and unforgettable experiences
-        </p>
-      </div>
-      {/* ////////////////////////// */}
-
-      <div className="relative overflow-hidden">
-        <div className="absolute w-[2px] h-[calc(100%-300px)] bg-gray-600 opacity-100 top-0 left-8 rounded-full"></div>
-        {/* Scrollbar that moves with scroll */}
-        <div
-          id="scrollbar"
-          className="absolute w-[2px] h-[300px] bg-primary left-8 rounded-full"
-          style={{
-            top: `calc(-500px + ${scrollPosition}px)`, // Updates top based on scroll position
-          }}
-        ></div>
-        <MainSection />
-        <MainSection />
-        <MainSection />
-        <div className="pb-10 md:pb-40">
-          <MainSection />
-        </div>
-      </div>
-    </>
+    <div className="w-full text-secondary">
+      <HeroSection subSection="PAST SHOW" />
+      <Timeline data={data} />
+    </div>
   );
 }
-
-export default PastShowPage;

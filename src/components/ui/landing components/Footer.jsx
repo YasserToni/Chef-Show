@@ -16,13 +16,13 @@ function Footer() {
           unique beauty with Gumus® - where luxury meets femininity.
         </div>
         <div className="flex gap-4">
-          <div className="mt-8 flex justify-center items-center w-16 h-16 border rounded-full border-[#8B8B8B] cursor-pointer">
+          <div className="mt-8 flex justify-center items-center w-16 h-16 border rounded-full border-[#8B8B8B] hover:border-primary cursor-pointer">
             <img src={facebookIcon} alt="facebook icon" />
           </div>
-          <div className="mt-8 flex justify-center items-center w-16 h-16 border rounded-full border-[#8B8B8B] cursor-pointer">
+          <div className="mt-8 flex justify-center items-center w-16 h-16 border rounded-full border-[#8B8B8B] hover:border-primary cursor-pointer">
             <img src={insgramIcon} alt="insgram icon" />
           </div>
-          <div className="mt-8 flex justify-center items-center w-16 h-16 border rounded-full border-[#8B8B8B] cursor-pointer">
+          <div className="mt-8 flex justify-center items-center w-16 h-16 border rounded-full border-[#8B8B8B] hover:border-primary cursor-pointer">
             <img src={mailIcon} alt="mail icon" />
           </div>
         </div>

@@ -7,8 +7,6 @@ import PastShowPage from "./pages/PastShowPage";
 import Navbar from "./components/ui/landing components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
-import { TimelineDemo } from "./pages/TimelineDemo";
-import { Timeline } from "./components/ui/timeline";
 
 function PageWrapper({ children }) {
   return (
@@ -66,7 +64,7 @@ function AinmationRoutes() {
           path="/pastshow"
           element={
             <PageWrapper>
-              <TimelineDemo />
+              <PastShowPage />
             </PageWrapper>
           }
         />
@@ -76,7 +74,7 @@ function AinmationRoutes() {
 }
 function App() {
   return (
-    <div className="bg-[#131313]">
+    <div className="bg">
       <div className=" absolute top-0 z-30 w-full">
         <Navbar />
       </div>
