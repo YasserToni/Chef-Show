@@ -14,7 +14,7 @@ function HeroSection({ subSection }) {
         {subSection}
       </div>
       <div className="mt-5 flex gap-2 lg:gap-[18px] font-plus font-normal text-xs lg:text-base leading-4">
-        <Link to="/" className="text-secondary z-40">
+        <Link to="/" className="text-secondary z-20">
           HOME
         </Link>
 

@@ -25,7 +25,7 @@ function MobileSheet() {
           <li>
             <Link
               to="/"
-              className="text-lg font-semibold text-primary"
+              className="text-lg font-semibold hover:text-primary"
               onClick={() => setIsOpen(false)}
             >
               Home

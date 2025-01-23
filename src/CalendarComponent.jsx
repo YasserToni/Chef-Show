@@ -119,7 +119,7 @@ const CalendarComponent = () => {
           {displayedDays.map((day, index) => (
             <div
               key={index}
-              className={`w-[125px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
+              className={`w-[140px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
                 day.booking_status === "fully_booked"
                   ? "text-white cursor-not-allowed pointer-events-none"
                   : day.booking_status === "low_availability"
@@ -142,20 +142,20 @@ const CalendarComponent = () => {
               >
                 {day.date}
               </span>
-              <span className="text-[9px] font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
+              <span className="text-[10px] lg:text-[9px]  font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
             </div>
           ))}
           {/* Show More or Show Less Button */}
           {visibleDays < days.length ? (
             <button
-              className="w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[140px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowMore}
             >
               More
             </button>
           ) : (
             <button
-              className="w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[140px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowLess}
             >
               <img
