@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import navbarIcon from "../../../assets/im/headerImage/FooterIcon.png";
 import MobileSheet from "./MobileSheet";
 function Navbar() {
@@ -65,7 +65,7 @@ function Navbar() {
       </div>
       <div className="my-[18px] hidden md:block">
         <button className="font-plus font-medium text-sm leading-[14px] tracking-[.04em] text-secondary bg-primary py-[19px] px-[24px]">
-          RESERVATION
+          <Link to="/reservation">RESERVATION</Link>
         </button>
       </div>
       <div className="xl:hidden border-b border-primary ">

@@ -3,8 +3,12 @@ import { Img } from "react-image";
 import { Timeline } from "../components/ui/timeline";
 import img1 from "../assets/im/headerImage/img1.jpg";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
+import { useEffect } from "react";
 
 export default function PastShowPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const data = [
     {
       title: "The BBQ Show",

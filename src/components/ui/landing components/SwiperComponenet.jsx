@@ -12,6 +12,7 @@ import leftIcon from "../../../assets/im/headerImage/right.svg";
 
 import swiperIcon from "./../../../assets/im/headerImage/swipreIcon.png";
 import rectangle from "../../../assets/im/headerImage/Rectangle 3.png";
+import { Link } from "react-router-dom";
 
 const SwiperComponent = () => {
   return (
@@ -81,7 +82,7 @@ const SwiperComponent = () => {
                   we serve food, Harmony, & Laughter Since 1991
                 </div>
                 <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary mt-10 shadow-[4px_4px_10px_0px_#00000014]">
-                  RESERVATION
+                  <Link to="/reservation">RESERVATION</Link>
                 </button>
               </div>
             </div>

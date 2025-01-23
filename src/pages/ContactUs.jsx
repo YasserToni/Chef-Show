@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import contactUsImage from "../assets/im/headerImage/contactUsImage.png";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
 
 const ContactUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeroSection subSection="contact us" />

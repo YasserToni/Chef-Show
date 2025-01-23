@@ -148,14 +148,14 @@ const CalendarComponent = () => {
           {/* Show More or Show Less Button */}
           {visibleDays < days.length ? (
             <button
-              className="w-[140px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[140px] lg:w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowMore}
             >
               More
             </button>
           ) : (
             <button
-              className="w-[140px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[140px] lg:w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowLess}
             >
               <img

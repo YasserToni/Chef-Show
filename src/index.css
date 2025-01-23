@@ -34,6 +34,9 @@ html {
 .bg {
   background: radial-gradient(42.7% 74.11% at 50% 0%, #1d1d1d 0%, #131313 100%);
 }
+.circle {
+  border-color: linear-gradient(227.16deg, #eccba2 -35.98%, #c19f74 90.37%);
+}
 
 /* //////////////////////////////////////// */
 

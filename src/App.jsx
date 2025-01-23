@@ -4,6 +4,7 @@ import LandingPage from "./pages/LandingPage";
 import ResrevationPage from "./pages/ResrevationPage";
 import Footer from "./components/ui/landing components/Footer";
 import PastShowPage from "./pages/PastShowPage";
+import BookingPage from "./pages/BookingPage";
 import Navbar from "./components/ui/landing components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
@@ -65,6 +66,14 @@ function AinmationRoutes() {
           element={
             <PageWrapper>
               <PastShowPage />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/booking"
+          element={
+            <PageWrapper>
+              <BookingPage />
             </PageWrapper>
           }
         />

@@ -1,8 +1,12 @@
+import { useEffect } from "react";
 import CalendarComponent from "../CalendarComponent";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
 
 function ResrevationPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <HeroSection subSection="reservation" />
