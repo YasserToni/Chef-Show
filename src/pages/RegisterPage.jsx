@@ -1,6 +1,4 @@
-// import Input from "../components/ui/reservreation components/Input";
 import contactUsImage from "../assets/im/headerImage/contactUsImage.png";
-import Support from "../assets/im/perfect_place/Rectangle 6.png";
 import ChefIcon from "../assets/im/headerImage/Group 36702.png";
 import { Link } from "react-router-dom";
 function RegistrePage() {
