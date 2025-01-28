@@ -81,7 +81,7 @@ const SwiperComponent = () => {
                 <div className="font-plus font-normal text-secondary px-5 text-xs lg:text-xl lg:leading-[20px] text-center tracking-[.04em] mt-[14px]">
                   we serve food, Harmony, & Laughter Since 1991
                 </div>
-                <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary lg:mt-10 shadow-[4px_4px_10px_0px_#00000014]">
+                <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary mt-10 shadow-[4px_4px_10px_0px_#00000014]">
                   <Link to="/reservation">RESERVATION</Link>
                 </button>
               </div>
