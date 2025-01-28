@@ -10,16 +10,16 @@ function MobileSheet() {
     <div className="relative font-Restora cursor-pointer">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="sm:hidden fixed top-4 right-4 z-50  text-white p-2 rounded"
+        className=" fixed top-4 right-4 z-50  text-white p-2 rounded"
       >
-        {isOpen ? <MdCancelPresentation size={30} /> : <HiBars3 size={40} />}
+        {isOpen ? <MdCancelPresentation size={40} /> : <HiBars3 size={40} />}
       </button>
 
       {/* Sheet Navigation */}
       <div
-        className={`fixed top-0 right-0 h-screen w-64 bg-black text-secondary transform ${
+        className={`fixed top-0 right-0 h-screen w-72 bg-black text-secondary transform ${
           isOpen ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 sm:hidden z-10`}
+        } transition-transform duration-300  z-10`}
       >
         <ul className="flex flex-col space-y-6 mt-10 p-6">
           <li>

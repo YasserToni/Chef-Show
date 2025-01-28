@@ -24,6 +24,7 @@ const LandingPage = () => {
         <Navbar />
       </div>
       <SwiperComponenet />
+
       <div className="mx-4 lg:mx-20">
         <Header
           specialClass={"w-[668px]"}

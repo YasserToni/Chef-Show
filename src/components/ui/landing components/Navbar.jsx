@@ -33,7 +33,7 @@ function Navbar() {
           alt="navbar icon"
         />
       </div>
-      <div className="hidden md:block">
+      <div className="hidden lg:block">
         <ul className="flex gap-2  text-secondary h-full items-center ">
           <li className="  border-primary py-[32px] transition-all duration-300 text-sm leading-5">
             <NavLink to="/" className="p-2 rounded-md hover:bg-primary ">
@@ -63,12 +63,12 @@ function Navbar() {
           </li>
         </ul>
       </div>
-      <div className="my-[18px] hidden md:block">
+      <div className="my-[18px] hidden lg:block">
         <button className="font-plus font-medium text-sm leading-[14px] tracking-[.04em] text-secondary bg-primary py-[19px] px-[24px]">
           <Link to="/reservation">RESERVATION</Link>
         </button>
       </div>
-      <div className="xl:hidden border-b border-primary ">
+      <div className=" sm:block lg:hidden border-b border-primary ">
         <MobileSheet />
       </div>
     </nav>
