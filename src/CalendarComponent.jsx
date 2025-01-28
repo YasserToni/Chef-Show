@@ -75,7 +75,7 @@ const CalendarComponent = () => {
         </div>
         <div className="flex items-center gap-[6px]">
           <div className="bg-[#FCA82A] w-[10px] h-[10px] self-center"></div>
-          <span className="font-Restora text-sm leading-[14px] text-secondary uppercase">
+          <span className="font-Restora text-[8.4px] leading-[14px] text-secondary uppercase">
             Low Availability
           </span>
         </div>
@@ -83,7 +83,7 @@ const CalendarComponent = () => {
           <span>
             <div className="bg-[#27AE60] w-[10px] h-[10px] self-center"></div>
           </span>
-          <span className="font-Restora text-sm leading-[14px] text-secondary uppercase">
+          <span className="font-Restora text-[8.4px] leading-[14px] text-secondary uppercase">
             Available
           </span>
         </div>
@@ -119,7 +119,7 @@ const CalendarComponent = () => {
           {displayedDays.map((day, index) => (
             <div
               key={index}
-              className={`w-[150px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
+              className={`w-[145px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
                 day.booking_status === "fully_booked"
                   ? "text-white cursor-not-allowed pointer-events-none"
                   : day.booking_status === "low_availability"
@@ -156,14 +156,14 @@ const CalendarComponent = () => {
           {/* Show More or Show Less Button */}
           {visibleDays < days.length ? (
             <button
-              className="w-[150px] lg:w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[145px] lg:w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowMore}
             >
               More
             </button>
           ) : (
             <button
-              className="w-[150px] lg:w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[145px] lg:w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowLess}
             >
               <img
