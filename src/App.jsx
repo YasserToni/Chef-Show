@@ -8,6 +8,10 @@ import BookingPage from "./pages/BookingPage";
 import Navbar from "./components/ui/landing components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
+import LoginPage from "./pages/LoginPage";
+import RegistrePage from "./pages/RegisterPage";
+import ForgetPasswordPage from "./pages/ForgetPasswordPage";
+import ResetPasswordPage from "./pages/ResetPasswordPage";
 
 function PageWrapper({ children }) {
   return (
@@ -17,7 +21,7 @@ function PageWrapper({ children }) {
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 1 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
       />
 
       <motion.div
@@ -25,7 +29,7 @@ function PageWrapper({ children }) {
         initial={{ scaleY: 1 }}
         animate={{ scaleY: 0 }}
         exit={{ scaleY: 0 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 1.0, ease: [0.22, 1, 0.36, 1] }}
       />
       {children}
     </>
@@ -77,6 +81,38 @@ function AinmationRoutes() {
             </PageWrapper>
           }
         />
+        <Route
+          path="/login"
+          element={
+            <PageWrapper>
+              <LoginPage />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/register"
+          element={
+            <PageWrapper>
+              <RegistrePage />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/forgetPassword"
+          element={
+            <PageWrapper>
+              <ForgetPasswordPage />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/resetPassword"
+          element={
+            <PageWrapper>
+              <ResetPasswordPage />
+            </PageWrapper>
+          }
+        />
       </Routes>
     </AnimatePresence>
   );
@@ -84,11 +120,11 @@ function AinmationRoutes() {
 function App() {
   return (
     <div className="bg">
-      <div className=" absolute top-0 z-30 w-full">
+      {/* <div className=" absolute top-0 z-30 w-full">
         <Navbar />
-      </div>
+      </div> */}
       <AinmationRoutes />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }
