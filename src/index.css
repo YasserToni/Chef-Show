@@ -20,13 +20,15 @@
 html {
   scroll-behavior: smooth;
 }
+
 .header-container {
   margin-bottom: 0px !important;
   margin-top: 0px !important;
 }
 
 .smallBtn {
-  top: 76.5%;
+  /* top: 76.5%; */
+  top: 68%;
 }
 .active {
   background-color: #c19f74;

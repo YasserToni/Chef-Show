@@ -1,14 +1,21 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import contactUsImage from "../assets/im/headerImage/contactUsImage.png";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
+import Navbar from "../components/ui/landing components/Navbar";
+import Footer from "../components/ui/landing components/Footer";
 
 const ContactUs = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Scroll to the top of the page
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <>
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       <HeroSection subSection="contact us" />
       <div className="flex justify-center mx-auto">
         <div className="grid   grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 xl:flex-wrap-reverse xl:w-[1202px] border border-primary mx-4 lg:mx-[120px] mb-20 lg:mb-[180px] mt-[80px] ">
@@ -50,6 +57,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

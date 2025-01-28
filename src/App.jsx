@@ -129,11 +129,7 @@ function AinmationRoutes() {
 function App() {
   return (
     <div className="bg">
-      {/* <div className=" absolute top-0 z-30 w-full">
-        <Navbar />
-      </div> */}
       <AinmationRoutes />
-      {/* <Footer /> */}
     </div>
   );
 }

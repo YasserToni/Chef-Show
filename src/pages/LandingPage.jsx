@@ -9,14 +9,20 @@ import fork_Knife from "../assets/im/headerImage/Fork-Knife.png";
 import perfectPlaceIcon from "../assets/im/headerImage/perfectPlaceIcon.png";
 import menuIcon from "../assets/im/headerImage/MenuIcon.png";
 import reviewIcon from "../assets/im/headerImage/ReviewIcon.png";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
+import Footer from "../components/ui/landing components/Footer";
+import Navbar from "../components/ui/landing components/Navbar";
 
 const LandingPage = () => {
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Scroll to the top of the page
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       <SwiperComponenet />
       <div className="mx-4 lg:mx-20">
         <Header
@@ -53,6 +59,7 @@ const LandingPage = () => {
         <Reviews carouselDirection="carousel-track_left" />
         <Support />
       </div>
+      <Footer />
     </>
   );
 };

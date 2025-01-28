@@ -63,13 +63,13 @@ const CalendarComponent = () => {
 
   return (
     <div className="">
-      <div className="font-Restora text-secondary text-[40px] leading-[40px] tracking-[.02em] font-normal">
+      <div className="font-Restora text-secondary text-[28px] lg:text-[40px] leading-[40px] tracking-[.02em] font-normal">
         Pick Your Day
       </div>
       <div className="flex gap-6 mt-6">
         <div className="flex items-center gap-[6px]">
           <div className="bg-[#EB5757] w-[10px] h-[10px] self-center"></div>
-          <span className="font-Restora text-sm leading-[14px] text-secondary uppercase">
+          <span className="font-Restora text-[8.4px] leading-[14px] text-secondary uppercase">
             fully booked
           </span>
         </div>
@@ -119,7 +119,7 @@ const CalendarComponent = () => {
           {displayedDays.map((day, index) => (
             <div
               key={index}
-              className={`w-[140px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
+              className={`w-[150px] lg:w-[118px] h-[116px] flex flex-col items-center justify-center border border-primary px-3 ${
                 day.booking_status === "fully_booked"
                   ? "text-white cursor-not-allowed pointer-events-none"
                   : day.booking_status === "low_availability"
@@ -128,7 +128,11 @@ const CalendarComponent = () => {
               } ${selectedDay === day ? "bg-primary text-white" : ""} `}
               onClick={() => handleDayClick(day)}
             >
-              <span className="font-plus text-sm leading-[14px] tracking-[.04em] text-[#A5A5A5] mt-3">
+              <span
+                className={`"font-plus text-sm leading-[14px] tracking-[.04em] mt-3"  ${
+                  selectedDay === day ? " text-white" : "text-[#A5A5A5]"
+                }`}
+              >
                 {day.day}
               </span>
               <span
@@ -142,20 +146,24 @@ const CalendarComponent = () => {
               >
                 {day.date}
               </span>
-              <span className="text-[10px] lg:text-[9px]  font-plus leading-[10px] font-medium text-[#A5A5A5] mb-3">{`START FROM-$${day.price}`}</span>
+              <span
+                className={`" text-[10px] lg:text-[9px]  font-plus leading-[10px] font-medium ${
+                  selectedDay === day ? " text-white" : "text-[#A5A5A5]"
+                }  mb-3"`}
+              >{`START FROM-$${day.price}`}</span>
             </div>
           ))}
           {/* Show More or Show Less Button */}
           {visibleDays < days.length ? (
             <button
-              className="w-[140px] lg:w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[150px] lg:w-[118px] h-[118px] bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowMore}
             >
               More
             </button>
           ) : (
             <button
-              className="w-[140px] lg:w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
+              className="w-[150px] lg:w-[118px] h-[118px] flex justify-center items-center bg-primary text-secondary font-Restora font-normal text-2xl leading-6 tracking-[.02em]"
               onClick={handleShowLess}
             >
               <img

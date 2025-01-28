@@ -1,14 +1,20 @@
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
 import CalendarComponent from "../CalendarComponent";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
 import Input from "../components/ui/reservreation components/Input";
+import Navbar from "../components/ui/landing components/Navbar";
+import Footer from "../components/ui/landing components/Footer";
 
 function ResrevationPage() {
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Scroll to the top of the page
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       <HeroSection subSection="reservation" />
       <div className=" flex flex-wrap justify-center gap-8 my-20 mx-4">
         <div>
@@ -37,8 +43,8 @@ function ResrevationPage() {
           </div>
         </div>
 
-        <div className="p-4 lg:p-8 border border-primary lg:w-[514px] lg:h-[590px] sticky top-[97px]">
-          <div className="font-Restora font-normal text-[40px] leading-[40px] text-secondary capitalize tracking-[.02em]">
+        <div className="p-4 lg:p-8 border border-primary w-full lg:w-[514px] lg:h-[590px] sticky top-[97px]">
+          <div className="font-Restora font-normal text-[28px] lg:text-[40px] leading-[40px] text-secondary capitalize tracking-[.02em]">
             enter your data
           </div>
           <div className="mt-[14px] font-plus font-[300px] text-sm leading-[14px] tracking-[.02em] text-secondary">
@@ -55,6 +61,7 @@ function ResrevationPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }

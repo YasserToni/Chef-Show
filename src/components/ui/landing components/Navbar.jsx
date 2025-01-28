@@ -22,7 +22,7 @@ function Navbar() {
 
   return (
     <nav
-      className={`" w-full fixed font-plus font-normal text-[18px] leading-[18px] px-[20px] lg:px-[60px] bg-opacity-50 flex justify-between border-b-[.5px] navBorder" ${
+      className={`" w-full fixed top-0 h-[90px] font-plus font-normal text-[18px] leading-[18px] px-[20px] lg:px-[60px] bg-opacity-50 flex justify-between border-b-[0.2px] border-[#ffffff1f] " ${
         isScrolled ? "bg-black/40 backdrop-blur-md" : "bg-transparent"
       }`}
     >
@@ -34,18 +34,18 @@ function Navbar() {
         />
       </div>
       <div className="hidden md:block">
-        <ul className="flex lg:gap-16 text-secondary h-full items-center ">
-          <li className="  border-primary py-[32px] transition-all duration-300">
+        <ul className="flex gap-2  text-secondary h-full items-center ">
+          <li className="  border-primary py-[32px] transition-all duration-300 text-sm leading-5">
             <NavLink to="/" className="p-2 rounded-md hover:bg-primary ">
               HOME
             </NavLink>
           </li>
-          <li className="  border-primary py-[32px] transition-all duration-300">
+          <li className="  border-primary py-[32px] transition-all duration-300 text-sm leading-5">
             <NavLink className="p-2 rounded-md hover:bg-primary " to="/contact">
               CONTACT
             </NavLink>
           </li>
-          <li className="   border-primary py-[32px] transition-all duration-300">
+          <li className="   border-primary py-[32px] transition-all duration-300 text-sm leading-5">
             <NavLink
               to="/pastshow"
               className="p-2 rounded-md hover:bg-primary "
@@ -53,7 +53,7 @@ function Navbar() {
               PAST SHOWS
             </NavLink>
           </li>
-          <li className=" border-primary py-[32px] transition-all duration-300">
+          <li className=" border-primary py-[32px] transition-all duration-300 text-sm leading-5">
             <NavLink
               to="/reservation"
               className="p-2 rounded-md hover:bg-primary "

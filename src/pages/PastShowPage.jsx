@@ -3,10 +3,13 @@ import { Img } from "react-image";
 import { Timeline } from "../components/ui/timeline";
 import img1 from "../assets/im/headerImage/img1.jpg";
 import HeroSection from "../components/ui/reservreation components/HeroSection";
-import { useEffect } from "react";
+import { useLayoutEffect } from "react";
+import Navbar from "../components/ui/landing components/Navbar";
+import Footer from "../components/ui/landing components/Footer";
 
 export default function PastShowPage() {
-  useEffect(() => {
+  useLayoutEffect(() => {
+    // Scroll to the top of the page
     window.scrollTo(0, 0);
   }, []);
   const data = [
@@ -141,9 +144,15 @@ export default function PastShowPage() {
     },
   ];
   return (
-    <div className="w-full text-secondary">
-      <HeroSection subSection="PAST SHOW" />
-      <Timeline data={data} />
-    </div>
+    <>
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
+      <div className="w-full text-secondary">
+        <HeroSection subSection="PAST SHOW" />
+        <Timeline data={data} />
+      </div>
+      <Footer />
+    </>
   );
 }

@@ -75,13 +75,13 @@ const SwiperComponent = () => {
                     alt="rectangle"
                   />
                 </div>
-                <div className="font-Restora font-normal px-5 lg:px-0 text-[34px] lg:text-[72px] leading-[3.6rem] lg:leading-[92px] text-secondary lg:w-[711px] text-center mt-10 tracking-[.02em] uppercase">
+                <div className="font-Restora font-normal px-5 lg:px-0 text-[38px] lg:text-[72px] leading-[3rem] lg:leading-[92px] text-secondary lg:w-[711px] text-center mt-6 lg:mt-10 tracking-[.02em] uppercase">
                   delicious food eating experience
                 </div>
-                <div className="font-plus font-normal text-secondary px-5 text-xl leading-[20px] text-center tracking-[.04em] mt-[14px]">
+                <div className="font-plus font-normal text-secondary px-5 text-xs lg:text-xl lg:leading-[20px] text-center tracking-[.04em] mt-[14px]">
                   we serve food, Harmony, & Laughter Since 1991
                 </div>
-                <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary mt-10 shadow-[4px_4px_10px_0px_#00000014]">
+                <button className="text-sm leading-[14px] font-plus font-medium tracking-[.04em] text-secondary py-[19px] px-6 border border-primary lg:mt-10 shadow-[4px_4px_10px_0px_#00000014]">
                   <Link to="/reservation">RESERVATION</Link>
                 </button>
               </div>

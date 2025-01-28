@@ -20,7 +20,7 @@ function VerificationPage() {
           <button className="flex justify-center w-full h-fit text-[#000000] text-base lg:text-xl  lg:leading-5 tracking-[.04m] text-center font-plus font-medium py-4 bg-primary mt-6 lg:mt-8 ">
             Continue
           </button>
-          <div className="w-full text-center lg:my-7 my-4 font-medium text-base leading-[16px] font-plus">
+          <div className="w-full text-center lg:my-7 my-4 font-medium text-sm leading-[16px] font-plus">
             <span className="text-secondary mr-1">
               (2:10) Didn’t receive the email?
             </span>

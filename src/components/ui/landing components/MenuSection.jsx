@@ -2,7 +2,7 @@ import productImag from "../../../assets/im/menu/image 1.png";
 function MenuSection() {
   return (
     <div className="flex justify-center mx-auto">
-      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6 md:gap-4 lg:gap-8  ">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  gap-6 md:gap-4 lg:gap-8  ">
         {Array.from({ length: 8 }).map((_, index) => (
           <div key={index} className="w-[296px]  shrink-0">
             <div className="w-[300px] h-[356px]">

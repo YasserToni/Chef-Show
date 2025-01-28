@@ -18,7 +18,7 @@ function Header({ specialClass, icon, iconName, header, decription }) {
           </span>
           <img className="w-[6px] h-[6px]" src={rectangle} alt="rectangle" />
         </div>
-        <div className="text-secondary font-normal text-[28px]  lg:text-[56px] leading-[36px] lg:leading-[70px] font-Restora mt-[16px] lg:mt-[32px]  text-center uppercase">
+        <div className="text-secondary font-normal text-[28px]  lg:text-[48px] leading-[30px] lg:leading-[70px] font-Restora mt-[16px] lg:mt-[32px]  text-center uppercase">
           {header}
         </div>
         {decription ? (
