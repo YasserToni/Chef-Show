@@ -43,7 +43,7 @@ function ResrevationPage() {
           </div>
         </div>
 
-        <div className="p-4 lg:p-8 border border-primary sm:w-full md:w-[514px] lg:w-[514px] lg:h-[590px] sticky top-[97px]">
+        <div className="p-4 lg:p-8 border border-primary w-full lg:w-[514px] lg:h-[590px] sticky top-[97px]">
           <div className="font-Restora font-normal text-[28px] lg:text-[40px] leading-[40px] text-secondary capitalize tracking-[.02em]">
             enter your data
           </div>
