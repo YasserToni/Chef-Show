@@ -12,6 +12,7 @@ import LoginPage from "./pages/LoginPage";
 import RegistrePage from "./pages/RegisterPage";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
+import VerificationPage from "./pages/VerificationPage";
 
 function PageWrapper({ children }) {
   return (
@@ -110,6 +111,14 @@ function AinmationRoutes() {
           element={
             <PageWrapper>
               <ResetPasswordPage />
+            </PageWrapper>
+          }
+        />
+        <Route
+          path="/verifyPassword"
+          element={
+            <PageWrapper>
+              <VerificationPage />
             </PageWrapper>
           }
         />
