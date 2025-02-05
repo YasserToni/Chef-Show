@@ -13,7 +13,7 @@ function ForgetPasswordPage() {
             <h2 className="font-bold lg:text-[36px] text-[26px]  leading-[56px] text-secondary font-Restora">
               Forgot password?
             </h2>
-            <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 lg:pb-8 border-b border-[#525252]">
+            <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 pb-8 border-b border-[#525252]">
               We’ll send you a link to create a new password.
             </p>
             <form action="" className="flex flex-col gap-4">
@@ -30,23 +30,6 @@ function ForgetPasswordPage() {
             </form>
           </div>
         </div>
-        {/* <div className="lg:block hidden relative">
-          <div className="absolute w-full h-full bg-[#00000099] z-10 top-0 left-0 "></div>
-          <div className="absolute top-[48px] left-[48px] z-40 text-secondary text-[40px] leading-[58px] xl:text-[56px] xl:leading-[78px]  tracking-[2%] uppercase font-normal font-Restora">
-            <span className="text-primary">No Worries!</span> <br />
-            Let’s Reset It.
-          </div>
-          <img
-            className="absolute z-40 bottom-[58px] right-[58px] "
-            src={ChefIcon}
-            alt="icon"
-          />
-          <img
-            className="w-[680px]"
-            src={forgetPasswordImage}
-            alt="login form image"
-          />
-        </div> */}
         <div className="lg:block hidden relative">
           <div className="absolute w-full h-full  z-10 top-0 left-0"></div>
           <div className="absolute top-[48px] left-[48px] z-40 text-secondary text-[40px] leading-[58px] xl:text-[56px] xl:leading-[78px]  tracking-[2%] uppercase font-normal font-Restora">

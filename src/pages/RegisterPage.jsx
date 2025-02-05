@@ -12,7 +12,7 @@ function RegistrePage() {
             <h2 className="font-bold lg:text-[36px] text-[26px]  leading-[56px] text-secondary font-Restora">
               Join The Chef Show Today!
             </h2>
-            <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 lg:pb-8 border-b border-[#525252]">
+            <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 pb-8 border-b border-[#525252]">
               Sign up now and enjoy a seamless dining experience!
             </p>
             <form action="" className="flex flex-col gap-4">

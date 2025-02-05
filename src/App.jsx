@@ -1,11 +1,11 @@
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import ContactUs from "./pages/ContactUs";
 import LandingPage from "./pages/LandingPage";
 import ResrevationPage from "./pages/ResrevationPage";
-import Footer from "./components/ui/landing components/Footer";
+// import Footer from "./components/ui/landing components/Footer";
 import PastShowPage from "./pages/PastShowPage";
 import BookingPage from "./pages/BookingPage";
-import Navbar from "./components/ui/landing components/Navbar";
+// import Navbar from "./components/ui/landing components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import { motion } from "framer-motion";
 import LoginPage from "./pages/LoginPage";
@@ -13,6 +13,9 @@ import RegistrePage from "./pages/RegisterPage";
 import ForgetPasswordPage from "./pages/ForgetPasswordPage";
 import ResetPasswordPage from "./pages/ResetPasswordPage";
 import VerificationPage from "./pages/VerificationPage";
+import AccountSettingPage from "./pages/AccountSettingPage";
+import Account from "./pages/Account";
+import Booking from "./pages/Booking";
 
 function PageWrapper({ children }) {
   return (
@@ -122,6 +125,12 @@ function AinmationRoutes() {
             </PageWrapper>
           }
         />
+        {/* Sidebar Integrated Routes */}
+        <Route path="/account-settings" element={<AccountSettingPage />}>
+          <Route index element={<Navigate to="account" replace />} />
+          <Route path="account" element={<Account />} />
+          <Route path="booking" element={<Booking />} />
+        </Route>
       </Routes>
     </AnimatePresence>
   );

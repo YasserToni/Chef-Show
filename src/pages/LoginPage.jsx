@@ -9,7 +9,7 @@ function LoginPage() {
       <div className="grid lg:grid-cols-2 lg:w-[1440px] gap-[72px]">
         <div className="flex items-center justify-center ">
           <div className=" lg:ml-[120px] md:w-[549px] mx-4 lg:mx-0">
-            <h2 className="font-bold lg:text-[36px] text-[26px]  leading-[56px] text-secondary font-Restora">
+            <h2 className="font-bold lg:text-[36px] text-[24px]  leading-[56px] text-secondary font-Restora">
               Welcome to The Chef Show!
             </h2>
             <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 pb-8 border-b border-[#525252]">

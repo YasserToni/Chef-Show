@@ -3,12 +3,16 @@ import mapImg from "../assets/im/headerImage/map.png";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import Footer from "../components/ui/landing components/Footer";
+import Navbar from "../components/ui/landing components/Navbar";
 function BookingPage() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <>
+      <div className=" absolute top-0 z-30 w-full">
+        <Navbar />
+      </div>
       <div className=" flex justify-center items-center flex-col">
         <div className="mt-[120px]">
           <div className=" h-[64px] flex justify-center items-center">

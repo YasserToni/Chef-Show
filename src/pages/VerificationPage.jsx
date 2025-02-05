@@ -13,7 +13,7 @@ function VerificationPage() {
             <h2 className="font-bold lg:text-[36px] text-[26px]  leading-[56px] text-secondary font-Restora">
               Verification Code
             </h2>
-            <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 md:pb-8 border-b border-[#525252]">
+            <p className="lg:text-[16px] text-xs lg:leading-[16px] mt-1 lg:mt-[6px] text-secondary font-plus mb-6 pb-8 border-b border-[#525252]">
               For security reasons, this code expires in 2 minutes.
             </p>
             <form action="" className="flex flex-col gap-4">
